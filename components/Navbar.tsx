@@ -42,7 +42,7 @@ export default function PortfolioNavbar() {
                             Resume
                         </NavbarButton>
                         <NavbarButton
-                            href="https://github.com/<your-username>"
+                            href="https://github.com/lucw1991"
                             variant="gradient"
                             className="text-white"
                         >
@@ -64,7 +64,7 @@ export default function PortfolioNavbar() {
                             <NavbarButton href="/resume.pdf" variant="secondary">
                                 Resume
                             </NavbarButton>
-                            <NavbarButton href="https://github.com/<your-username>" variant="primary">
+                            <NavbarButton href="https://github.com/lucw1991" variant="primary">
                                 GitHub
                             </NavbarButton>
                         </div>
