@@ -6,12 +6,14 @@ import PortfolioNavbar from "@/components/Navbar";
 type ProjectPrev = {
     title: string;
     blurb: string;
+    githubHref?: string;
 };
 
 const projects: ProjectPrev[] = [
     {
         title: "Multiplatform Mobile Calendar Application for iOS and Android (KMP)",
-        blurb: "This is a multiplatform application I built early on. It uses basic CRUD operations to manage a personal calendar persistently."
+        blurb: "This is a multiplatform application I built early on. It uses basic CRUD operations to manage a personal calendar persistently.",
+        githubHref: "https://github.com/lucw1991/CalendarProject"
     },
     {
         title: "Project 2",
@@ -26,18 +28,34 @@ const projects: ProjectPrev[] = [
         blurb: "Description of Project 4"
     },
     {
-        title: "Project 5",
-        blurb: "Description of Project 5"
+        title: "Poste, ASU Senior Capstone Project",
+        blurb: "My capstone project was a really interesting application build! My work focused on implementing a user-friendly"
+        + " UI experience from the home page and transitioning into different areas of the application. I also did a fair"
+        + " amount of backend set up for the iOS side of the app to implement a sign up and sign in functionality that "
+        + "complies with the Clerk backend authentication protocols for development environments. This work was NDA protected"
+        + " so I am unable to provide any source code or a link to the github repository."
     }
 ];
 
 // Scrollable desription of projects
-function ScrollCard({ title, children }: { title: string; children: string }) {
+function ScrollCard({ title, children, githubHref }: { title: string; children: string; githubHref?: string }) {
     return (
         <div className="rounded-2xl border border-white/10 bg-zinc-950/50 backdrop-blur-md">
             <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
                 <h3 className="text-sm font-semibold text-zinc-100">{title}</h3>
-                <span className="text-xs text-zinc-400">preview</span>
+                <div className="flex items-center gap-3">
+                    {githubHref && (
+                        <a
+                            href={githubHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-zinc-400 transition-colors hover:text-zinc-100"
+                        >
+                            GitHub →
+                        </a>
+                    )}
+                    <span className="text-xs text-zinc-400">preview</span>
+                </div>
             </div>
 
             {/* Scrollable body */}
@@ -97,7 +115,7 @@ export default function LandingHero() {
                 {/* Project preview list */}
                 <div className="mt-10 grid gap-4">
                     {projects.map((p) => (
-                        <ScrollCard key={p.title} title={p.title}>
+                        <ScrollCard key={p.title} title={p.title} githubHref={p.githubHref}>
                             {p.blurb}
                         </ScrollCard>
                     ))}
