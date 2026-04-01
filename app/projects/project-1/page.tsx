@@ -75,6 +75,14 @@ export default function CalendarProjectPage() {
                     <p className="mt-2 text-sm text-zinc-400">
                         Kotlin Multiplatform &nbsp;·&nbsp; iOS &amp; Android
                     </p>
+                    <a
+                        href="https://github.com/lucw1991/CalendarProject"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-zinc-100"
+                    >
+                        View on GitHub →
+                    </a>
                 </div>
 
                 <ScreenshotSection title="Main Pages" screenshots={mainPages} />
