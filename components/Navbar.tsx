@@ -20,7 +20,6 @@ export default function PortfolioNavbar() {
         { name: "Calendar and Planner KMP Mobile App", link: "/projects/project-1" },
         { name: "ASU Online Scheduler (Collaboration)", link: "/projects/project-2" },
         { name: "Android Mobile Recipe Planning Application", link: "/projects/project-3" },
-        { name: "Swift App to be made", link: "/projects/project-4" },
         { name: "Senior Capstone Project (ePoste)", link: "/projects/project-5" },
     ];
 
